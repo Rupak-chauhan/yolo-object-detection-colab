@@ -20,7 +20,7 @@ def train_model():
     model = YOLO('yolov8n.pt')
     # model.to('cuda')
     # model.train(data="data.yaml", epochs=200, imgsz=608, batch=8, save=True, save_crop=True, device=0)
-    model.train(data="data.yaml", epochs=50, imgsz=608, batch=8, save=True, save_crop=True, device=[0, 1])
+    model.train(data="data.yaml", epochs=50,  patience=300, imgsz=608, batch=8, save=True, save_crop=True, device=[0, 1])
     print("Executed");
     return {"response": "Trained model successfully."}
     # mo
