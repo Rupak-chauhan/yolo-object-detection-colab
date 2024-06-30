@@ -15,7 +15,8 @@ app = FastAPI()
 @app.get("/train")
 def train_model():
     # augmentation_client = AugmentationData()
-    # client.init_augmentation()
+    # augmentation_client.init_augmentation()
+    # return {"response": "Trained model successfully."}
     model = YOLO('yolov8n.pt')
     # model.to('cuda')
     # model.train(data="data.yaml", epochs=200, imgsz=608, batch=8, save=True, save_crop=True, device=0)
